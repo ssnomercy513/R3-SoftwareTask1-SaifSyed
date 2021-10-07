@@ -1,13 +1,13 @@
-static byte cdPins[2][4] = {
+static byte cdPins[2][4] = { // pins being used
   {4, 5, 6, 7},
   {8, 9, 10, 11}
   
 };
-int potentiometer = A5;
-int val,input,tens,ones;
+int potentiometer = A5; // input pin for potentiometer 
+int val,input,tens,ones; 
 
 void setup() {
-  for (byte i=0; i<=9; i++){
+  for (byte i=4; i<=9; i++){ // selects pins 4-9 as output 
     pinMode(i, OUTPUT); 
   }
   pinMode(potentiometer,INPUT);  
